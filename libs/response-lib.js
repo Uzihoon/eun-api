@@ -14,5 +14,5 @@ function buildResponse(statusCode, body) {
       "Access-Control-Allow-Credentials": true
     },
     body: JSON.stringify(body)
-  }
+  };
 }
