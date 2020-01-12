@@ -13,11 +13,17 @@
     "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.39",
+    "@types/request": "^2.48.4",
     "aws-sdk": "^2.599.0",
     "jest": "^24.9.0",
     "serverless-bundle": "^1.2.5",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^5.3.3"
+    "serverless-offline": "^5.3.3",
+    "serverless-plugin-typescript": "^1.1.9",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.7.4"
   },
   "dependencies": {
     "uuid": "^3.3.3"
