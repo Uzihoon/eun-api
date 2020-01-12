@@ -20,7 +20,6 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action:
-        - dynamodb: DescribeTable
         - dynamodb: Query
         - dynamodb: Scan
         - dynamodb: GetItem
@@ -28,7 +27,6 @@ provider:
         - dynamodb: UpdateItem
         - dynamodb: DeleteItem
       Resource: "arn:aws:dynamodb:ap-northeast-2:*:*"
-
 functions:
   create:
     handler: create.main
