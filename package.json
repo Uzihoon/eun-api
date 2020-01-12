@@ -1,16 +1,15 @@
 {
   "name": "eun-app-api",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
-  "main": "handler.js",
+  "main": "",
   "scripts": {
     "test": "serverless-bundle test"
   },
   "author": "",
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
+    "type": "git"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.39",
@@ -26,6 +25,7 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
+    "@types/uuid": "^3.4.6",
     "uuid": "^3.3.3"
   }
 }

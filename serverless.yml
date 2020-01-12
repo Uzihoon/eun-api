@@ -6,6 +6,7 @@ package:
   individually: true
 
 plugins:
+  - serverless-plugin-typescript
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
@@ -29,7 +30,7 @@ provider:
       Resource: "arn:aws:dynamodb:ap-northeast-2:*:*"
 functions:
   create:
-    handler: create.main
+    handler: src/create.main
     events:
       - http:
           path: eun
@@ -40,7 +41,7 @@ functions:
     # Defines an HTTP API endpoint that calls the main function in get.js
     # - path: url path is /notes/{id}
     # - method: GET request
-    handler: get.main
+    handler: src/get.main
     events:
       - http:
           path: eun/{id}
@@ -48,7 +49,7 @@ functions:
           cors: true
           authorizer: aws_iam
   list:
-    handler: list.main
+    handler: src/list.main
     events:
       - http:
           path: eun
@@ -56,7 +57,7 @@ functions:
           cors: true
           authorizer: aws_iam
   update:
-    handler: update.main
+    handler: src/update.main
     events:
       - http:
           path: eun/{id}
@@ -64,7 +65,7 @@ functions:
           cors: true
           authorizer: aws_iam
   delete:
-    handler: delete.main
+    handler: src/delete.main
     events:
       - http:
           path: eun/{id}
